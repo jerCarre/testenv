@@ -16,6 +16,7 @@ jobs:
         run: echo Hello, world!
   translate:
     runs-on: ubuntu-latest
+    needs: build
     strategy:
       matrix:
         language: [EN-US, ZH]
@@ -27,7 +28,7 @@ jobs:
   publish:
 
     runs-on: ubuntu-latest
-    needs: build
+    needs: translate
     environment: medium
 
     steps:
