@@ -31,4 +31,4 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Run a one-line script
-        run: echo Hello, medium world! $(base64 ${{ secrets.MEDIUM_TOKEN }})
+        run: echo Hello, medium world! ${{ secrets.MEDIUM_TOKEN }}
